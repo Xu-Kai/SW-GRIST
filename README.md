@@ -45,7 +45,7 @@ There are two kinds of software in this repo. GRIST is a original version on Sun
 
 
 ### SWGOMP
-To build GRIST on Sunway, we should first build SWOMP on Sunway. 
+To build GRIST on Sunway, we should first build SWGOMP on Sunway. 
 
 ``` shell
 cd SWGOMP 
