@@ -1,0 +1,415 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"grist_dtp_",
+				"grist_dtp_coupling_dcmip2016_sc"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"nv",
+				"nv_compute"
+			],
+			[
+				"scala",
+				"scalar_2d_field"
+			],
+			[
+				"dtp",
+				"grist_dtp_initial"
+			],
+			[
+				"alloca",
+				"allocatable"
+			],
+			[
+				"allo",
+				"allocatable"
+			],
+			[
+				"solve",
+				"solve_tridiagonal_2d"
+			],
+			[
+				"sub",
+				"subroutine"
+			],
+			[
+				"phys_tend",
+				"phys_tend_hsdry_imp"
+			],
+			[
+				"grist_idealized_phy",
+				"grist_idealized_physics_mitc"
+			],
+			[
+				"train",
+				"train_images"
+			],
+			[
+				"tracer_trans",
+				"tracer_transport_time_integration_hori"
+			],
+			[
+				"grist_ref",
+				"grist_ref_atmos_final"
+			],
+			[
+				"deal",
+				"deallocate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/atmosphere/dynamics/dycore/grist_dycore_diagnose_module_2d.F90",
+			"settings":
+			{
+				"buffer_size": 23418,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/zhangyi/github/open-grist/ParGRIST/src",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere/amp",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere/dynamics",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere/gcm",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere/physics",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/grist_lib",
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/infrastructure"
+	],
+	"file_history":
+	[
+		"/Users/zhangyi/github/open-grist/ParGRIST/src/atmosphere/dynamics/dycore/grist_dycore_initial_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_initial_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_diffusion_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/physics/grist_physics_data_structure.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/2.f90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_initial_module.F90.bak",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/1.f90",
+		"/Users/zhangyi/1.ncl",
+		"/Users/zhangyi/Downloads/AREM2.3.1.USER 2/cld_pr/ccm3/cldsav.F",
+		"/Users/zhangyi/Downloads/cjvogl-E3SM-262ffea/components/homme/src/theta/homme_nvector.F90",
+		"/Users/zhangyi/Downloads/cjvogl-E3SM-262ffea/components/homme/src/sweqx/advance_mod.F90",
+		"/Users/zhangyi/Downloads/cjvogl-E3SM-262ffea/components/cam/src/dynamics/se/gravity_waves_sources.F90",
+		"/Users/zhangyi/prec_analysis/sub_plot_south.ncl",
+		"/Users/zhangyi/prec_analysis/gen_freq_inte_bin.ncl",
+		"/Users/zhangyi/prec_analysis/putnc2d.ncl",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_time_integration_2d.F90",
+		"/Users/zhangyi/work/grist_nh_implicit_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_coupling_module.F90",
+		"/Users/zhangyi/Downloads/rrtmg_sw_v4.02/gcm_model/src/rrtmg_sw_rad.f90",
+		"/Users/zhangyi/Downloads/rrtmg_sw_v4.02/gcm_model/src/rrtmg_sw_init.f90",
+		"/Users/zhangyi/Downloads/rrtmg_lw_v4.85/gcm_model/src/rrtmg_lw_rad.f90",
+		"/Users/zhangyi/topo-hex/plot.ncl",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/gcm/grist_gcm_io_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/core/io/grist_fileio_list_2d_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/core/io/grist_fileio_list_2d_module_par.F90",
+		"/Users/zhangyi/grist_nh_implicit_module_2d.F90",
+		"/Users/zhangyi/MPI-SCVT/scvt-mpi.cpp",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/core/operators/grist_mesh_weight_new.F90",
+		"/Users/zhangyi/supercell_test.f90",
+		"/Users/zhangyi/1.f90",
+		"/Users/zhangyi/CloudStation/dcgroup/grist_fileio_1d_module.f90",
+		"/Users/zhangyi/Downloads/WRFDA/dyn_em/module_force_scm.F",
+		"/Users/zhangyi/Downloads/AREM2.3.1.USER/dyn/funct.F",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nhd/grist_nh_driver_module.F90",
+		"/anaconda3/pkgs/boto-2.49.0-py37_0/lib/python3.7/site-packages/boto/elastictranscoder/layer1.py",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_dcmip2016_tc.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/gcm/grist_gcm_control_driver.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/gcm/grist.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_prescribe_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_limiter_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_ffsl_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_flux_operators.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_time_integration_hvsplit.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_vars_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/grid_generator/src/grist_basic_math.f90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/physics/grist_physics_idealized_package.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dcmip2016_tropical_cyclone.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_initial_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/grid/grist_grid_file_read.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_diagnose_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_gcd_recon_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_primal_flux_operators_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nhd/grist_nh_implicit_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nhd/grist_nh_explicit_tend_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/hpe/grist_hpe_vertial_advection.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/hpe/grist_hpe_hydro_pgf.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/hpe/grist_hpe_continuity.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_hori_swe_module_2d.F90",
+		"/Users/zhangyi/Downloads/dcmip2016_DYNAMICO 2/DYNAMICO/src/mpi_mod.F90",
+		"/Users/zhangyi/Downloads/dcmip2016_DYNAMICO 2/DYNAMICO/src/kinetic.f90",
+		"/Users/zhangyi/Downloads/dcmip2016_DYNAMICO 2/DYNAMICO/src/physics_dcmip2016.f90",
+		"/Users/zhangyi/Downloads/dcmip2016_DYNAMICO 2/DYNAMICO/src/dcmip_initial_conditions_test_1_2_3_v5.f90",
+		"/Users/zhangyi/Downloads/dcmip2016_DYNAMICO 2/DYNAMICO/src/trace.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/core/io/grist_fileio_list_1d_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dcmip2016_supercell.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/hpe/grist_hpe_constants.F90",
+		"/Users/zhangyi/code_base/fv3gfs-master/sorc/fv3gfs.fd/FV3/atmos_cubed_sphere/tools/fv_grid_tools.F90",
+		"/Users/zhangyi/code_base/fv3gfs-master/sorc/fv3gfs.fd/FV3/atmos_cubed_sphere/tools/fv_restart.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/dtp/grist_dtp_coupling_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/gcm/grist.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/dycore/nhd/grist_nh_explicit_tend_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/tracer_transport/grist_tracer_transport_prescribe_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/infrastructure/core/operators/grist_geometric_info.F90",
+		"/Users/zhangyi/Developer/github/grist3_20180612/par_grist/src/atmosphere/dycore/grist_dycore_initial_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_vars_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dtp/grist_dtp_init_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/grist_dtp_init_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nhd/grist_tridiagonal_solver.F90",
+		"/Users/zhangyi/MPI-SCVT-master/scvt-mpi.cpp",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nh-dynamics/grist_nh_explicit_tend_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nh-dynamics/grist_nh_driver_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nh-dynamics/grist_nh_implicit_module_2d.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nh-dynamics/grist_tridiagonal_solver.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/nh-dynamics/grist_nh_implicit_module.F90",
+		"/Users/zhangyi/cesm/cime/src/drivers/mct/shr/seq_comm_mct.F90",
+		"/Users/zhangyi/work/test.py",
+		"/Users/zhangyi/test.py",
+		"/Users/zhangyi/Developer/github/grist3_20180612/par_grist/src/atmosphere/gcm/grist.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/gcm/grist.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/gcm/grist_static_vars_module.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/gcm/grist_gcm_io_module.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/gcm/grist_gcm_control_driver.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_nh_explicit_tend_module_2d.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/physics/grist_phys_interface.F90",
+		"/Users/zhangyi/Downloads/par_grist_dev/src/atmosphere/physics/grist_phys_vars_module.F90",
+		"/Users/zhangyi/Developer/github/grist3_20180612/par_grist/src/atmosphere/physics/grist_physics_idealized_package.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/dtp/1.f90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/tracer_transport/grist_tracer_transport_vars_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/tracer_transport/grist_tracer_transport_diagnose_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/tracer_transport/grist_tracer_transport_diagnose_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/gcm/grist_gcm_control_driver.F90",
+		"/Users/zhangyi/Developer/grist/grist/seq_grist/src/atmosphere/dycore/grist_dycore_tracer_physics_coupling_module.F90",
+		"/Users/zhangyi/Developer/grist/grist/par_grist/src/atmosphere/dycore/grist_dycore_vars_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_hori_swe_module_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_gcd_recon_module_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_primal_flux_operators_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_diagnose_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_diagnose_module_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_nh_driver_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_nh_explicit_tend_module_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_nh_explicit_tend_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_nh_implicit_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/nh-dynamics/grist_tridiagonal_solver.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_ref_atmos.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/hpe/grist_hpe_vertial_advection.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/hpe/grist_hpe_hydro_pgf.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/hpe/grist_hpe_constants.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/hpe/grist_hpe_continuity.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/gcm/grist.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/gcm/grist_gcm_control_driver.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_time_integration_2d.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_vars_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/dycore/grist_dycore_diffusion_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/infrastructure/core/io/grist_fileio_list_1d_module.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/tracer_transport/grist_tracer_transport_flux_operators.F90",
+		"/Users/zhangyi/par_grist_dev/src/atmosphere/tracer_transport/grist_tracer_transport_ffsl_module.F90",
+		"/Users/zhangyi/par_grist_dev/grist_lib/src/grist_map.F90",
+		"/Users/zhangyi/par_grist_dev/grist_lib/src/grist_lib.F90"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/zhangyi/github/open-grist/ParGRIST/src"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/atmosphere/dynamics/dycore/grist_dycore_diagnose_module_2d.F90",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fortran/Syntaxes/Fortran - Modern.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/NCL.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 677.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

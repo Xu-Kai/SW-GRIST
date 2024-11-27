@@ -1,0 +1,17 @@
+&wrfphys_para
+ wrfphys_cu_scheme      = 'ResNet_hybrid'
+ wrfphys_cf_scheme      = 'RANDALL'
+ wrfphys_ra_scheme      = 'RRTMGDNN'
+ wrfphys_rasw_scheme    = 'RRTMGDNN'
+ wrfphys_ralw_scheme    = 'RRTMGDNN'
+ wrfphys_mp_scheme      = 'WSM6V381'
+ wrfphys_bl_scheme      = 'YSUV381'
+ wrfphys_sf_scheme      = 'SFCLAYV381'
+ wrfphys_lm_scheme      = 'noahmp'
+ wphys_has_req          = 1
+ unuse_cu               = .false.
+ step_cu                = 1
+ step_ra                = 3
+ use_gwdo               = .false.
+/
+

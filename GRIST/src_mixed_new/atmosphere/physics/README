@@ -1,0 +1,10 @@
+Model Physics is organized in terms of individual package, which should not play with 
+parallel data structure, all such efforts are handled by dtp stuff
+
+simple_physics: DCMIP simple physics suite
+amipw_physics: (meso-to-cloud) weather-style physics suite originally taken from WRF-V3
+amipc_physics: climate-style physics suite originally taken from CAM5
+
+
+Components copyright & terms of use
+The model physics components are copyrighted and may be used, modified, or redistributed under the terms conform to the original host model codes (if any). GRIST-Dev's modifications on these components are indicated by explicit statements.

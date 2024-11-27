@@ -1,0 +1,13 @@
+-I/usr/sw/swgcc/swgcc710-tools-SEA-1307/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/plugin/include
+-I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5
+-I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux
+-I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward
+-I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include
+-I/usr/local/include
+-I/usr/include
+-I/usr/sw/swgcc/swgcc710-tools-SEA-1307/shared_include
+-I/usr/sw/swgcc/swgcc710-tools-SEA/usr/lib_for_gcc/include/
+-D__sw_host__
+-D__sw_slave__
+-I../include/cross
+-xc++

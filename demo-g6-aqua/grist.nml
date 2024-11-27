@@ -1,0 +1,137 @@
+&ctl_para
+ day_duration           = 1.5
+ model_timestep         = 1200
+ h1_history_freq        = 72
+ h1_restart_freq        = 72
+ run_type               = 'init'
+ working_mode           = 'amipw'
+ write_history          = .false.
+ write_history_h1       = .false.
+ write_restart_h1       = .false.
+ write_stepinfo         = .false.
+ test_real_case         = .false.
+ doAquaPlanet           = .true.
+ start_ymd              = 20230728
+ start_tod              = 0
+ comm_group_size        = 1
+ grid_info              = "G6UR"
+/
+&data_para
+ outdir                 = './'
+ gridFilePath           = './'
+ gridFileNameHead       = 'grist.grid_file.g6.ccvt'
+ staticFilePath         = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/static_g12.nc'
+ large_atm_file_on      = .true.
+ initialAtmUFilePath    = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/U.ERA5-2023072800-pl.5.nc'
+ initialAtmVFilePath    = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/V.ERA5-2023072800-pl.2.nc'
+ initialAtmTFilePath    = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/T.ERA5-2023072800-pl.2.nc'
+ initialAtmQFilePath    = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/Q.ERA5-2023072800-pl.2.nc'
+ initialAtmFilePath     = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/sfc.nc'
+ initialLndFilePath     = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/sfc.nc'
+ sstFilePath            = '/home/export/base/ycsc_GBtougao/gbtougao/online1/zhangyi/GRIST_input/era5-20230728/init/'
+ initialDataSorc        = 'ERAIP'
+ numMonSST              = 12
+ sstFile_year_beg       = 2023
+ real_sst_style         = 'CYCLE'
+ sstFileNameHead        = 'realNoMissGFSSstSic20230728.'
+ sstFileNameTail        = '.grist.167772162.nc'
+ read_partition         = .false.
+ pardir                 = './'
+ aqua_sst_style         = 'RJ'
+/
+&swe_para
+ testcase               = 6
+ initialfield           = 6
+ nsplit                 = 6
+ time_scheme            = ''
+ advection_scheme       = 2
+ isolate_advection_test = .false.
+ conserve_scheme        = 'te'
+ test_dual_cell         = .false.
+ pv_order               = 2,2,2
+ generate_cdo_file      = .true.
+ use_limiter_rk3        = .false.
+ use_tr_mbs             = .false.
+ use_tspas              = .false.
+ ke_method              = 1
+ ke_alpha               = 0.9
+ mass_wtd_vor           = .true.
+ modon_radius           = 500000.
+/
+&dycore_para
+ gcm_testcase           = 'DCMIP2016-TC'
+ mas_adv_flag           = 2
+ pot_adv_flag           = 33,33,33
+ phi_adv_flag           = 33,33,33
+ www_adv_flag           = 33,33,33
+ ver_adv_flag           = 3
+ hor_pgf_flag           = 6
+ nrk                    = 2
+ nh_dynamics            = .true.
+ www_damping_coef       = 0.2
+ d3d_damping_coef       = 0.12
+ zd                     = 20000
+ imbeta                 = 0.55
+ imkesi                 = 0.55
+ smg_coef               = 0.015
+ ko4_coef               = 2e14
+ ref_leng               = 120000
+ do_dycore_laplacian_2nd= .true.
+ do_dycore_laplacian_4th= .true.
+ ad_dycore_laplacian_2nd= .true.
+ ad_dycore_laplacian_4th= .true.
+ eqs_vert_diff          = .true.
+ nexpdif_level          = 64
+ nsponge                = 10
+ spcoef                 = 0
+ use_expdif_tstep       = .true.
+ profile_type           = 'tp1'
+ dycore_timestep        = 150
+ vr_mode                = .false.
+ index_flag             = 'bfs'
+ www_k2coef_type        = 'SMG'
+ smooth_topo            = .true.
+ nsmooth_topo           = 10
+ smooth_type            = 'cellAvg'
+ topo_type              = 'static'
+ doNotDiagnose          = .true.
+ restore_hydro          = .false.
+ restore_hydro_minsteps = 1
+ restore_hydro_intsteps = 1
+/
+&tracer_para
+ ntracer                = 6
+ nmif                   = 3
+ mif_index              = 1,2,3
+ isolate_tracer_test    = .false.
+ tracer_timestep        = 600
+ tracer_hori_timestep   = 600
+ tracer_vert_timestep   = 600
+ tracer_hvsplit_method  = 1
+ tracer_transport_hori_scheme = 'rk3o3'
+ tracer_transport_vert_scheme = 'rk3o3-aimp'
+/
+&physics_para
+ nspecies               = 6
+ use_phys               = .true.
+ physpkg                = 'AMIPW_PHYSICS'
+ sub_physpkg            = 'none'
+ ptend_wind_rk_on       = .true.
+ ptend_heat_rk_on       = .true.
+ ptend_dycore_f1_on     = .false.
+ ptend_tracer_f1_on     = .false.
+ ptend_f2_on            = .true.
+ ptendSubDiabPhys       = .true.
+ physics_coupling       = 'P3'
+ use_som                = .false.
+/
+&mesh_para
+ mesh_nv                = 40962
+ mesh_glv               = 6 
+ nlev                   = 30
+ nlevp                  = 31
+ nlev_inidata           = 37
+ levsoil                = 4
+/
+&ccvt_para
+/

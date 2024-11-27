@@ -1,0 +1,4 @@
+*.o
+example/*.o
+*.swp
+*.swo

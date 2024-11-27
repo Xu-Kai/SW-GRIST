@@ -1,0 +1,3 @@
+#pragma once
+#define SWGOMP_TARGET_QUICK_MODE -1
+#define SWGOMP_PARALLEL_QUICK_MODE -1

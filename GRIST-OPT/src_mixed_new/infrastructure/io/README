@@ -1,0 +1,8 @@
+list io generate same results
+as original io
+tested for both 1d, 2d
+2d gcm is for gcm
+2d is for grid generator
+PiPatch is used on pi, that when comm_group_size is too large to write higher-than 2GB data,
+this will write data step by step to please >2GB. In normal case (Default), ">2GB" can be avoided by 
+setting comm_group_size=a small number like 10, 20; but PI sometimes does not accept such numbers for I/O.

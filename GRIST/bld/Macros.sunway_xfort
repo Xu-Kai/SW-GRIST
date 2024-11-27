@@ -1,0 +1,38 @@
+NETCDF_PATH    = /usr/sw/yyzlib/netcdf
+PNETCDF_PATH   = /usr/sw/yyzlib/pnetcdf
+LAPACK_PATH    = /usr/sw/yyzlib/lapack-3.8.0
+METIS_LIB_PATH = /home/export/online1/mdt00/shisuan/swgbcm/xduan/metis
+SWLU_PATH      = /home/export/online1/mdt00/shisuan/swgbcm/xduan/swlu
+GPTL_PATH      = /home/export/online1/mdt00/shisuan/swgbcm/xduan/cesm-timing
+GPERF_PATH     = /home/export/online1/mdt00/shisuan/swgbcm/xukai/gperftools/build
+PATH          := /home/export/online1/mdt00/shisuan/swgbcm/xduan/swgomp-dev/script/:$(PATH)
+CPPDEFS        = -I$(NETCDF_PATH)/include -I$(PNETCDF_PATH)/include -I$(SWLU_PATH)/include -I$(GPTL_PATH)/ -DWITH_SWLU -DWITH_GPTL
+#CHECK_FLAGS := -DCHK_SMG_EDDY_COEF -DCHK_TEND_NCT_AT_EDGE -DCHK_NORMAL_FLUX_TR_EDGE -DCHK_GRAD_KINETIC_ENERGY -DCHK_DYCORE_TIME_INTERGRATION \
+#              -DCHK_DIV_OP_2D_VAR2 -DCHK_GRIST_NH_DY_IMPLICIT -DCHK_NH_WWW_EQUATION -DCHK_NH_COMPUTE_RRR -DCHK_INT_RENEW_MASS_STATE \
+#              -DCHK_NH_DY_RUN_DIAGVARS -DPRIMAL_NORMAL_FLUX_AT_EDGE -DCHK_CORIOLIS -DCHK_HPE_TEND_VERT_MASS_FLUX_FACE_2d -DCHK_NH_AT_ADV_FACE \
+#              -DCHK_DIV_OP_2D -DCHK_HPE_TEND_CON_2D -DCHK_DY_DIAGNOSE_TOTAL_ENERGY -DCHK_HPE_VERT_MASS_FLUX_2D -DCHK_TRACER_INT_HORI -DCHK_TRACER_TRANS_CHECK_MXRT \
+#              -DTRACER_TRANS_TIME_INT_VERT_AIMP -DCHK_HPE_GET_FULL_MASS -DD2T_COUPLING_DRIVER -DCHK_TRANS_EVAL_MIF -DCHK_DTP_TIME_AVG -DCHK_TRACER_TIME_INT_RUN \
+#               -DTRACER_TRANS_AIMP_BLEND_MASS_FLUX -DCHK_NH_DY_RUN_EXPLICIT
+
+
+NOT_PASS_FLAGS := -DDIAGNOSE_TOTAL_ENERGY_MOIST_E2 -DDIAGNOSE_TOTAL_ENERGY_MOIST_E3
+NOT_ACCURACY_FLAGS := 
+#-DUSE_OMP_FOR_DIAGNOSE_TOTAL_ENERGY 
+FC       = mpixfort.py
+FFLAGS   = -O2 -mieee -ffree-line-length-none  -g -msimd $(CPPDEFS) $(CHECK_FLAGS) -Whost,-fno-inline $(NOT_ACCURACY_FLAGS) -DMIXCODE -DUSE_NOAHMP
+CC       = mpixcc.py
+CFLAGS   = -O2 -mieee -msimd -g $(CPPDEFS) 
+#-DMIXCODE
+CXX      = mpixcxx.py
+CXXFLAGS = -O2 -mieee -fno-trapping-math -msimd -g $(CPPDEFS) 
+#-DMIXCODE
+LINK     = mpixfort.py
+LIBS     = -L$(NETCDF_PATH)/lib -lnetcdff -lnetcdf -L$(PNETCDF_PATH)/lib -lpnetcdf -L$(LAPACK_PATH)/ -llapack -lrefblas -L$(METIS_LIB_PATH) -lmetis -lstdc++ -L$(SWLU_PATH)/lib -lswlu_mpi -L$(GPTL_PATH) -lgptl \
+            -lm_slave -L$(GPERF_PATH)
+
+# -Wl,--wrap,malloc,--wrap,calloc,--wrap,realloc,--wrap,free,--wrap,memcpy
+#-lprofiler
+
+
+BE = -fconvert=big-endian
+R8 = -fdefault-real-8 -fdefault-double-8

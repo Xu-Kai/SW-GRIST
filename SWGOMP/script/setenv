@@ -1,0 +1,3 @@
+#echo $BASH_SOURCE
+SCRIPTS=$(readlink -f $(dirname $BASH_SOURCE))
+export PATH=${SCRIPTS}:$PATH

@@ -1,0 +1,7 @@
+   By default, GRIST uses an online partition approach, which is very flexible. For very-large resolution runs (e.g., global 5 km),
+using an offline partition approach is better for efficiency. The model solutions are itentical in either approach. The steps are:
+(1) Use partition.exe and associated namelist setup to partition for a fixed core number.
+ ./partition.exe 320 (partition to 320 cores for MPI; note that index_opt should be set during this procedure if desired)
+(2) Activate read_partition in model runs by settting the following two in dycore_para of grist.nml.
+ read_partition         = .true.
+ pardir                 = ${partition_file_path}

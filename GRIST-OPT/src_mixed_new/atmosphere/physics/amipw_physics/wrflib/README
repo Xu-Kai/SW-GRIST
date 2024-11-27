@@ -1,0 +1,26 @@
+Update ysu, sf, v341 with v381, add gwd v381
+2020-12-25:
+Not all of these modules and their combinations are well tested.
+To add a module, please indicate the exact WRF version as vXXX
+
+Default setup at 2021-01:
+RAD: RRTMG from v341
+CU: NTiedtke from v381
+MP: WSM6 from v381 (lin/ylin can run less than 1 year, but abort for longer runs; seasonal run is ok)
+BL: YSU from v381
+SF: sfclay from v381
+CF: CAM3
+This set up has been tested for multiyear runs at 1d.
+LSM: noahmp defined with WRF2_CLIMATE and WRF2_PHYSICS
+update rad to v381, v341 cannot be compiled due to conflict, use macro selection
+
+Default setup since 2021-04:
+MP: WSM6V381 from v381 (LINV381, nspecies=5; MORR_TWOM_V381, nspecies=10) can be options, tested in UR and VR grids (e.g., G6, G8X16L4). Only WSM6 is tested for multiyear-climate integration.
+BL: YSUV381 from v381
+GWDO: V381 version combined with BL scheme.
+CU: Tiedtke-Bechtold (ntiedtke) from v381
+RAD: RRTMGV381 from v381 for SW and LW
+SF: sfclay from v381
+CloudFraction: CAM3; Xu-Randall; Binary; (choose accroding to different applications)
+LSM: noahmp defined with WRF2_CLIMATE and WRF2_PHYSICS
+This set up has been tested for multiyear AMIP runs at 1d-resolution (MP=WSM6).

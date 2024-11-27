@@ -1,0 +1,10 @@
+adv: run swm in a passive advecetion mode
+swe: run swm in a full mode
+dycore: run 3d atmosphere in only dycore
+tracer: run 3d atmosphere in only tracer
+dtp:    run 3d atmosphere in dtp
+amipc: run 3d AMIP atmosphere using CAM physics structure
+amipw: run 3d AMIP atmosphere using WRF physics structure
+Note: amipc and amipw need different compilation.
+
+THIS DIRECTORY HAS NOT BEEN CONSTANTLY UPDATED; BE CAREFULL WITH MODEL SETUP.

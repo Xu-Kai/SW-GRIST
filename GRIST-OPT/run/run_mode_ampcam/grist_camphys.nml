@@ -1,0 +1,125 @@
+&phys_ctl_nl
+  deep_scheme               = 'off'        !'ZM' or 'off'
+  shallow_scheme            = 'double_plume'        !'UW' or 'double_plume', Turn off deep_scheme if use double_plume
+  eddy_scheme               = 'diag_TKE'
+  microp_scheme             = 'MG'      !'MG'   or 'MG_LIN'
+  macrop_scheme             = 'park'    !'park' or 'lin'
+  radiation_scheme          = 'rrtmg'
+  conv_water_in_rad         = 1
+  state_debug_checks        = .true.
+  lsm_scheme                = 'noahmp'
+/
+&wv_sat_nl
+  wv_sat_scheme             = 'GoffGratch'
+/
+&cldfrc_nl
+  cldfrc_dp1		        =  0.10D0 
+  cldfrc_dp2		        =  500.0D0 
+  cldfrc_freeze_dry	    	= .true.
+  cldfrc_ice		        = .true.
+  cldfrc_icecrit		    =  0.93D0 
+  cldfrc_iceopt		        =  5 
+  cldfrc_premib		        =  700.0D2 
+  cldfrc_premit		        =  40000.0D0 
+  cldfrc_rhminh		        =  0.800D0 
+  cldfrc_rhminl		        =  0.8975D0 
+  cldfrc_rhminl_adj_land	=  0.100D0 
+  cldfrc_sh1		        =  0.04D0 
+  cldfrc_sh2		        =  500.0D0 
+  trop_cloud_top_press      =  1.D2
+  clim_modal_aero_top_press =  1.D-4
+/
+&uwshcu_nl
+  uwshcu_rpen		        =   10.0 
+/
+&zmconv_nl
+  zmconv_c0_lnd		        =   0.0059D0 
+  zmconv_c0_ocn		        =   0.02D0 !0.0450D0 
+  zmconv_ke		            =   7.0E-6  !1.0E-6 
+  zmconv_tau                =   3600.  
+/
+&vert_diff_nl
+  diff_cnsrv_mass_check     =  .false.
+  do_iss                    =  .true.
+  eddy_lbulk_max            = 40.D3
+  eddy_leng_max             = 40.D3
+  eddy_max_bot_pressure     = 100.D3
+  kv_freetrop_scale         = 1.D0
+  kv_top_pressure           = 0.D0
+  kv_top_scale              = 1.D0
+  do_tms                    = .false.
+  tms_orocnst               =  1.D0
+  tms_z0fac                 =  0.075D0
+/
+&radiation_nl
+  FLG_4DDA_SW               = .false.
+  FLG_4DDA_LW               = .false.
+/
+&macro_nl
+  macro_do_cldice      = .true.
+  macro_do_cldliq      = .true.
+  macro_do_detrain     = .true.
+/
+&micro_mg_nl
+  micro_mg_version          = 1
+  micro_mg_sub_version      = 5
+  micro_mg_do_cldice        = .true.
+  micro_mg_do_cldliq        = .true.
+/
+&microp_aero_nl
+  microp_aero_bulk_scale    = 2.
+/
+&rad_cnst_nl
+  mode_defs		            = 'mam3_mode1:accum:=', 'N:num_a1:N:num_c1:num_mr:+',
+         'N:so4_a1:N:so4_c1:sulfate:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc:+', 'N:pom_a1:N:pom_c1:p-organic:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ocpho_rrtmg_c101112.nc:+',
+         'N:soa_a1:N:soa_c1:s-organic:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc:+', 'N:bc_a1:N:bc_c1:black-c:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/bcpho_rrtmg_c100508.nc:+',
+         'N:dst_a1:N:dst_c1:dust:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/dust4_rrtmg_c090521.nc:+', 'N:ncl_a1:N:ncl_c1:seasalt:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc',
+         'mam3_mode2:aitken:=', 'N:num_a2:N:num_c2:num_mr:+',
+         'N:so4_a2:N:so4_c2:sulfate:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc:+', 'N:soa_a2:N:soa_c2:s-organic:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc:+',
+         'N:ncl_a2:N:ncl_c2:seasalt:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc', 'mam3_mode3:coarse:=',
+         'N:num_a3:N:num_c3:num_mr:+', 'N:dst_a3:N:dst_c3:dust:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/dust4_rrtmg_c090521.nc:+',
+         'N:ncl_a3:N:ncl_c3:seasalt:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc:+', 'N:so4_a3:N:so4_c3:sulfate:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc'
+  rad_climate		        = 'A:specific_humidity:H2O', 'G:O2:O2', 'G:CO2:CO2',
+         'G:O3:O3', 'G:N2O:N2O', 'G:CH4:CH4',
+         'G:CFC11:CFC11', 'G:CFC12:CFC12', 'M:mam3_mode1:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/mam3_mode1_rrtmg_c110318.nc',
+         'M:mam3_mode2:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/mam3_mode2_rrtmg_c110318.nc', 'M:mam3_mode3:/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/mam3_mode3_rrtmg_c110318.nc'
+  iceopticsfile		        = '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/iceoptics_c080917.nc'
+  liqopticsfile		        = '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/F_nwvl200_mu20_lam50_res64_t298_c080428.nc'
+  icecldoptics		        = 'mitchell'
+  liqcldoptics		        = 'gammadist'
+/
+&modal_aer_opt_nl
+  water_refindex_file		= '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
+/
+&solar_inparm
+  solar_data_file           = '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/solar/solar_ave_sc19-sc23.c090810.nc'
+  solar_htng_spctrl_scl     = .true.
+/
+&chem_surfvals_nl
+  ch4vmr                    = 1760.0e-9
+  co2vmr                    = 367.0e-6
+  f11vmr                    = 653.45e-12
+  f12vmr                    = 535.0e-12
+  n2ovmr                    = 316.0e-9
+/
+&prescribed_aero_nl
+  prescribed_aero_cycle_yr       = 2000
+  prescribed_aero_datapath       = '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/chem/trop_mam/aero'
+  prescribed_aero_file       = 'mam3_1.9x2.5_L30_2000clim_c130319.nc'
+  prescribed_aero_specifier      = 'num_c1', 'bc_c1', 'dst_c1', 'ncl_c1', 'pom_c1', 'so4_c1', 'soa_c1', 'num_c2',
+          'ncl_c2', 'so4_c2', 'soa_c2', 'num_c3', 'dst_c3', 'ncl_c3', 'so4_c3', 'num_a1_logm',
+          'bc_a1_logm', 'dst_a1_logm', 'ncl_a1_logm', 'pom_a1_logm', 'so4_a1_logm', 'soa_a1_logm', 'num_a2_logm', 'ncl_a2_logm',
+          'so4_a2_logm', 'soa_a2_logm', 'num_a3_logm', 'dst_a3_logm', 'ncl_a3_logm', 'so4_a3_logm', 'num_a1_logv', 'bc_a1_logv',
+          'dst_a1_logv', 'ncl_a1_logv', 'pom_a1_logv', 'so4_a1_logv', 'soa_a1_logv', 'num_a2_logv', 'ncl_a2_logv', 'so4_a2_logv',
+          'soa_a2_logv', 'num_a3_logv', 'dst_a3_logv', 'ncl_a3_logv', 'so4_a3_logv'
+  prescribed_aero_type       = 'CYCLICAL'
+/
+&prescribed_ozone_nl
+  prescribed_ozone_cycle_yr      = 2000
+  prescribed_ozone_datapath      = '/g8/JOB_TMP/pengxd/lixh/GRIST_init_data/inputdata/atm/cam/ozone'
+  prescribed_ozone_file      = 'ozone_1.9x2.5_L26_2000clim_c091112.nc'
+  prescribed_ozone_name      = 'O3'
+  prescribed_ozone_type      = 'CYCLICAL'
+/
+&aerosol_nl
+/

@@ -1,0 +1,22 @@
+&ctl_para
+/
+&data_para
+ outdir                 = ${partition_file_path}
+ gridFilePath           = ${mesh_file_path}
+ gridFileNameHead       = 'grist.grid_file.g6.ccvt'
+/
+&swe_para
+/
+&dycore_para
+ index_flag             = 'bfs'
+ /
+&tracer_para
+/
+&physics_para
+/
+&mesh_para
+ mesh_nv                = 40962
+ mesh_glv               = 6
+/
+&ccvt_para
+/

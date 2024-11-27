@@ -1,0 +1,15 @@
+NETCDF_PATH = /usr/sw/yyzlib/netcdf
+PNETCDF_PATH = /usr/sw/yyzlib/pnetcdf
+LAPACK_PATH = /usr/sw/yyzlib/lapack-3.8.0
+METIS_LIB_PATH = /home/export/online1/mdt00/shisuan/swgbcm/xduan/metis
+SWLU_PATH=/home/export/online1/mdt00/shisuan/swgbcm/xduan/swlu/
+FC       = mpif90
+FFLAGS   = -O2 -mieee -ffree-line-length-320 -I$(NETCDF_PATH)/include -I$(PNETCDF_PATH)/include -DLAM_DOMAIN -DCDATE -DUSE_HALO2 -g
+CC       = mpicc
+CFLAGS   = -O2 -mieee -I$(NETCDF_PATH)/include -I$(PNETCDF_PATH)/include -DLAM_DOMAIN -DCDATE -DUSE_HALO2 -g -I$(SWLU_PATH)/include
+CXX      = sw9g++
+CXXFLAGS = -O2 -mieee -I$(NETCDF_PATH)/include -I$(PNETCDF_PATH)/include -fno-trapping-math
+LINK     = mpif90
+LIBS     = -L$(NETCDF_PATH)/lib -lnetcdff -lnetcdf -L$(PNETCDF_PATH)/lib -lpnetcdf -L$(LAPACK_PATH)/ -llapack -lrefblas -L$(METIS_LIB_PATH) -lmetis -lstdc++ -L$(SWLU_PATH)/lib -lswlu_mpi
+BE = -fconvert=big-endian
+R8 = -fdefault-real-8

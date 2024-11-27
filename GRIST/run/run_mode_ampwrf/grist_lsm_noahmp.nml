@@ -1,0 +1,23 @@
+&lsm_noahmp_nl
+  dynamic_veg_option                = 4
+  canopy_stomatal_resistance_option = 1
+  btr_option                        = 1
+  runoff_option                     = 3
+  surface_drag_option               = 1
+  supercooled_water_option          = 1
+  frozen_soil_option                = 1
+  radiative_transfer_option         = 3
+  snow_albedo_option                = 2
+  pcp_partition_option              = 1
+  tbot_option                       = 2
+  temp_time_scheme_option           = 1
+  surface_resistance_option         = 1
+  glacier_option                    = 1
+/ 
+&lsm_soil_layers_nl
+  num_soil_layers                   = 4
+  soil_thick_input(1)               = 0.10
+  soil_thick_input(2)               = 0.30
+  soil_thick_input(3)               = 0.60
+  soil_thick_input(4)               = 1.00
+/

@@ -1,0 +1,8 @@
+control=gcm
+dynamics=dycore+tracer
+pdc=dtp
+physics
+data module=datam
+scm=an independent SCM model for testing physics
+amp=a working-mode that inherits dtp with extensions to ocean surface modeling
+    mainly for testing the full physpkg package

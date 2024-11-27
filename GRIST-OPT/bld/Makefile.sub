@@ -1,0 +1,46 @@
+MODEL		?= GCM
+MACHINE         ?= sunway
+include 	Macros
+FLAGS_SWM       :=
+FLAGS_GCM       := -DCDATE
+FLAGS_GCM_AMIPC := -DSPIO -DCMAPI -DCDATE -DAMIPC_PHYSICS -DUSE_NOAHMP -DOCNABD -DCAM3OCNABD
+FLAGS_GCM_AMIPW := -DRRTMG_V381 -DSCALE_TBCU -DSPIO -DUSE_LEAP_YEAR $(BE) $(R8) -DAMIPW_PHYSICS -DAMIPW_CLIMATE -DUSE_NOAHMP -DCDATE
+FLAGS_AMIPW     := $(FLAGS_GCM_AMIPW)
+FLAGS_AMIPC     := $(FLAGS_GCM_AMIPC)
+FLAGS_SCM_PhysC := -DSPIO -DCDATE -DAMIPC_PHYSICS -DSCM_PHYSICS
+FLAGS_SCM_PhysW := -DRRTMG_V381 -DSCALE_TBCU -DSPIO -DUSE_LEAP_YEAR $(BE) $(R8) -DAMIPW_PHYSICS -DAMIPW_CLIMATE -DSCM_PHYSICS -DCDATE
+FFLAGS          += $(FLAGS_$(MODEL)) -I../../src/include -DUSE_HALO2
+VPATH           := $(subst $(space), :, $(shell cat Filepath))
+MAIN_OBJ	:= grist_atmos.o
+ifeq ($(findstring SWM,$(MODEL)),SWM)
+MAIN_OBJ        := grist_swm.o
+endif
+ifeq ($(findstring SCM,$(MODEL)),SCM)
+MAIN_OBJ        := grist_scm.o
+endif
+X :=$(shell echo $(MAIN_OBJ))
+OBJS            := $(filter-out grist_partition.o,$(filter-out $(MAIN_OBJ),$(addsuffix .o,$(basename $(shell cat Srcfiles)))))
+EXE_ATM         := ../ParGRIST-$(MODEL)-$(MACHINE).exe
+EXE_PAR         := ../partition-$(MODEL)-$(MACHINE).exe
+#
+.SUFFIXES:
+MAKEFLAGS += --no-builtin-rules
+all: $(EXE_ATM) $(EXE_PAR)
+$(EXE_ATM): $(MAIN_OBJ) $(OBJS)
+	$(LINK) $(LDFLAGS) $^ -o $@ $(LIBS)
+$(EXE_PAR): grist_partition.o $(OBJS)
+	$(LINK) $(LDFLAGS) $^ -o $@ $(LIBS)
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.F90
+	$(FC) $(FFLAGS) -c $< -o $@
+%.o: %.F
+	$(FC) $(FFLAGS) -c $< -o $@
+%.inc: %.inc.in
+	cp $< $@
+include Depends
+.PHONY: clean
+clean:
+	rm *.o *.mod *.exe Srcfiles Filepath Depends
